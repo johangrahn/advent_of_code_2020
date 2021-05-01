@@ -33,51 +33,49 @@ fn solve_part2(input: Vec<usize>) -> usize {
 }
 
 #[cfg(test)]
-mod tests {
-    mod part1 {
-        use crate::days;
+mod part1 {
+    use crate::days;
 
-        #[test]
-        fn test_part1_example() {
-            let input = "1721
+    #[test]
+    fn test_part1_example() {
+        let input = "1721
        979
       366
       299
       675
       1456
       ";
-            let result = days::day1::day1(input.to_string());
-            assert_eq!(result.0, 514579);
-        }
-
-        #[test]
-        fn test_part1_input() {
-            let input = std::fs::read_to_string("input/1.txt").unwrap();
-            let result = days::day1::day1(input.to_string());
-            assert_eq!(result.0, 436404);
-        }
+        let result = days::day1::day1(input.to_string());
+        assert_eq!(result.0, 514579);
     }
 
-    mod part2 {
-        #[test]
-        fn test_part2_example() {
-            let input = "1721
+    #[test]
+    fn test_part1_input() {
+        let input = std::fs::read_to_string("input/1.txt").unwrap();
+        let result = days::day1::day1(input.to_string());
+        assert_eq!(result.0, 436404);
+    }
+}
+
+mod part2 {
+    #[test]
+    fn test_part2_example() {
+        let input = "1721
           979
          366
          299
          675
          1456
         ";
-            let result = crate::days::day1::day1(input.to_string());
-            assert_eq!(result.1, 241861950);
-        }
+        let result = crate::days::day1::day1(input.to_string());
+        assert_eq!(result.1, 241861950);
+    }
 
-        #[test]
-        fn test_part2_input() {
-            let input = std::fs::read_to_string("input/1.txt").unwrap();
+    #[test]
+    fn test_part2_input() {
+        let input = std::fs::read_to_string("input/1.txt").unwrap();
 
-            let result = crate::days::day1::day1(input.to_string());
-            assert_eq!(result.1, 274879808);
-        }
+        let result = crate::days::day1::day1(input.to_string());
+        assert_eq!(result.1, 274879808);
     }
 }
