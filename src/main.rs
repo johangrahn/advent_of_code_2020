@@ -5,6 +5,7 @@ fn main() {
 
     days.insert("1".to_string(), &days::day1::day1);
     days.insert("2".to_string(), &days::day2::day2);
+    days.insert("3".to_string(), &days::day3::day3);
     let args: Vec<String> = env::args().collect();
 
     if args.len() == 2 {
